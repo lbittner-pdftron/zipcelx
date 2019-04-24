@@ -6,7 +6,7 @@ export default {
   filename: 'report',
   sheets: [
     {
-      sheetname: 'testSheet',
+      sheetName: 'testSheet',
       data: [
         [{
           value: 'Test',

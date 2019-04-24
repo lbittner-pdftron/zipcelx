@@ -20,7 +20,7 @@ const multiSheetConfigDescription = expect.objectContaining({
   sheets: expect.arrayContaining([
     expect.objectContaining(
       {
-        sheetname: expect.any(String),
+        sheetName: expect.any(String),
         data: expect.arrayContaining(baseConfig.sheet.data)
       })
   ])

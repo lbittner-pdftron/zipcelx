@@ -26,7 +26,7 @@ const generateWorkbook = (config) => {
     const id = i + 1;
     zip.file(`xl/worksheets/sheet${id}.xml`, generateXMLWorksheet(sheets[i].data));
     contentTypeData += `<Override ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml" PartName="/xl/worksheets/sheet${id}.xml"/>`;
-    workbookXMLData += `<sheet name="${sheets[i].sheetname || `Sheet${id}`}" sheetId="${id}" r:id="rId${id}"/>`;
+    workbookXMLData += `<sheet name="${sheets[i].sheetName || `Sheet${id}`}" sheetId="${id}" r:id="rId${id}"/>`;
     workbookXMLRelData += `<Relationship Id="rId${id}" Target="worksheets/sheet${id}.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet"/>`;
   }
 
