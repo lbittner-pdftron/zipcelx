@@ -9,6 +9,7 @@ import workbookXMLRels from './templates/workbook.xml.rels';
 import rels from './statics/rels';
 import contentTypes from './templates/[Content_Types].xml';
 import templateSheet from './templates/worksheet.xml';
+import styles from './statics/styles';
 
 export const generateXMLWorksheet = (rows) => {
   const XMLRows = generatorRows(rows);
@@ -34,6 +35,7 @@ const generateWorkbook = (config) => {
   zip.file('xl/_rels/workbook.xml.rels', workbookXMLRels.replace('{placeholder}', workbookXMLRelData));
   zip.file('[Content_Types].xml', contentTypes.replace('{placeholder}', contentTypeData));
   zip.file('_rels/.rels', rels);
+  zip.file('xl/styles.xml', styles);
 
   return zip;
 };
